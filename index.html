@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="observablehq-6e491f0e"></div>
+		<script type="module">
+			import {
+				Runtime,
+				Inspector
+			} from 'https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js';
+			import define from 'https://api.observablehq.com/@chadsconway/de-jong-attractor-ii.js?v=3';
+			const inspect = Inspector.into('#observablehq-6e491f0e');
+			new Runtime().module(define, name => name === 'viewof gl' && inspect());
+		</script>
+	</body>
+</html>
